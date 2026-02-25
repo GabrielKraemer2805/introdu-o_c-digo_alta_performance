@@ -28,6 +28,18 @@ public class Exercicio01 {
 
         }
 
+        int aprovado[] = new int[N];
+        int NaP=0;
+        for (int i = 0; i < N; i++){
+            if (media[i] >= 6){
+                aprovado[NaP] = rm[i];
+                NaP ++;
+            }
+        }
+        System.out.println("\n **** LISTA DE APROVADOS ****");
+        for (int i = 0; i< NaP; i++){
+            System.out.println(aprovado[i]);
+        }
 
 
 
