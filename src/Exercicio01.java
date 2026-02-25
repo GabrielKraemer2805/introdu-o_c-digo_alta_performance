@@ -3,37 +3,32 @@ import java.util.Scanner;
 public class Exercicio01 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        double[] nota1 = new double[10];
-        double[] nota2 = new double[10];
+        final int n = 3;
 
-        int[] rm = new int[3];
+        int rm[] = new int[n];
+        double nota1[] = new double[n];
+        double nota2[] = new double[n];
 
-        for (int i = 0; i < rm.length; i++){
-            System.out.println("QUal Rm do aluno: ");
-            rm[i] = sc.nextInt();
-
-            if (rm[i] >= 0){
-                System.out.println("qual a nota 1 do aluno? ");
-                nota1[i] = sc.nextDouble();
-                System.out.println("qual a nota 2 do aluno?");
-                nota2[i] = sc.nextDouble();
-
-
-                double[] media = new double[i];
-                media[i] = (nota1[i] + nota2[i]) / 2;
-
-                System.out.println(" O RM" + rm[i] + " Esta com a media " + media);
-            } else {
-                System.out.println("RM invalido");
-                break;
-            }
-
-
-
-
-
+        int N;
+        System.out.println(" informe o RM: ");
+        int rmlido = sc.nextInt();
+        for (N = 0; N<n && rmlido>0; N++){
+            rm[N] = rmlido;
+            System.out.println("Nota 1: ");
+            nota1[N] = sc.nextDouble();
+            System.out.println("Nota 2: ");
+            nota2[N] = sc.nextDouble();
+            System.out.println("informe o RM: ");
+            rmlido = sc.nextInt();
+        }
+        double media[] = new double[N];
+        for (int i = 0; i < N; i++){
+            media[i] = (nota1[i] + nota2[i])/2;
+            System.out.println("Rm: " + rm[i] + "\t media: " + media[i]);
 
         }
+
+
 
 
     }
